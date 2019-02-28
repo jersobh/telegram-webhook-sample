@@ -14,8 +14,8 @@ def set_webhook():
 
 
 set_webhook_response = set_webhook()
-if set_webhook_response.status_code != 200:
-    raise ValueError('Set webhook fail')
+#if set_webhook_response.status_code != 200:
+ #   raise ValueError('Set webhook fail')
 
 print(set_webhook_response.text)
 
