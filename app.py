@@ -27,4 +27,4 @@ def telegram():
     data_body = request.get_json()
     return jsonify(data_body)
 
-app.run()
+#app.run()
