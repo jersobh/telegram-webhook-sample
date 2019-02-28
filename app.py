@@ -22,7 +22,7 @@ print(set_webhook_response.text)
 app = Flask(__name__)
 
 
-@app.route('/', methods=['GET'])
+@app.route('/', methods=['POST'])
 def telegram():
     data_body = request.get_json()
     print(data_body)
