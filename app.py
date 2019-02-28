@@ -29,4 +29,5 @@ def telegram():
                          json={'chat_id': chat_id, 'text': answer})
     return jsonify(resp.json()), resp.status_code
 
+# app.run()
 
