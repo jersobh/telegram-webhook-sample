@@ -31,7 +31,8 @@ def telegram():
     username = message.get('from').get('username')
     text = f"{message.get('text')} ... {username}"
     chat_id = message.get('chat').get('id')
-    resp = requests.get(f'https://api.telegram.org/bot{BOT_TOKEN}/sendmessage?chat_id={chat_id}&text={text}')
+    resp = requests.post(f'https://api.telegram.org/bot{BOT_TOKEN}/sendmessage?POST',
+                         json={'chat_id': chat_id, 'text': text})
     return jsonify(resp.json()), resp.status_code
 
 # app.run()
