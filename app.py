@@ -25,6 +25,7 @@ app = Flask(__name__)
 @app.route('/', methods=['GET'])
 def telegram():
     data_body = request.get_json()
+    print(data_body)
     return jsonify(data_body)
 
 #app.run()
